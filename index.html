@@ -9,7 +9,6 @@
 </head>
 <body>  
   
-  <!-- Navigation bar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
@@ -42,7 +41,6 @@
     </div>
   </nav>
   
-  <!-- Modal for creating a new post -->
   <div class="modal fade" id="createPostModal" tabindex="-1" role="dialog" aria-labelledby="createPostModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -69,214 +67,223 @@
   </div>
 
 
-  <div class="d-flex justify-content-center">
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-grid-3x3-gap" viewBox="0 0 16 16">
-      <path d="M4 2v2H2V2h2zm1 12v-2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zm0-5V7a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zm0-5V2a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zm5 10v-2a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zm0-5V7a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zm0-5V2a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1zM9 2v2H7V2h2zm5 0v2h-2V2h2zM4 7v2H2V7h2zm5 0v2H7V7h2zm5 0h-2v2h2V7zM4 12v2H2v-2h2zm5 0v2H7v-2h2zm5 0v2h-2v-2h2zM12 1a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1h-2zm-1 6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V7zm1 4a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-2a1 1 0 0 0-1-1h-2z"/>
-    </svg>
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-grid-3x3-gap-fill" viewBox="0 0 16 16">
-      <path d="M1 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V2zM1 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V7zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V7zM1 12a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-2z"/>
-    </svg>
-  </div>
+  <ul class="nav nav-pills mb-3 container-fluid justify-content-center" id="pills-tab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active bg-transparent" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true"><svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M384 96V224H256V96H384zm0 192V416H256V288H384zM192 224H64V96H192V224zM64 288H192V416H64V288zM64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64z"/></svg>
+      </button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false"><i class="fa-solid fa-grip-vertical"></i>
+      </button>
+    </li>
+  </ul>
+  <div class="tab-content" id="pills-tabContent">
+    <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+      <div class="container pb-3">
+        <div class="row d-flex no-gutters my-3 mx-auto text-center">
+          <div class="col-4 pr-3"><img src="https://picsum.photos/id/200/400/300" alt="#"></div>
+          <div class="col-4 pr-3"><img src="https://picsum.photos/id/201/400/300" alt="#"></div>
+          <div class="col-4 pr-3"><img src="https://picsum.photos/id/202/400/300" alt="#"></div>
+        </div>
+    
+        <div class="row d-flex no-gutters my-3 mx-auto text-center">
+          <div class="col-4 pr-3"><img src="https://picsum.photos/id/203/400/300" alt="#"></div>
+          <div class="col-4 pr-3"><img src="https://picsum.photos/id/204/400/300" alt="#"></div>
+          <div class="col-4 pr-3"><img src="https://picsum.photos/id/210/400/300" alt="#"></div>
+        </div>
       
-  <div class="container pb-3">
-    <div class="row d-flex no-gutters my-3 mx-auto text-center">
-      <div class="col-4 pr-3"><img src="https://picsum.photos/id/200/400/300" alt="#"></div>
-      <div class="col-4 pr-3"><img src="https://picsum.photos/id/201/400/300" alt="#"></div>
-      <div class="col-4 pr-3"><img src="https://picsum.photos/id/202/400/300" alt="#"></div>
+        <div class="row d-flex no-gutters my-3 mx-auto text-center">
+          <div class="col-4 pr-3"><img src="https://picsum.photos/id/206/400/300" alt="#"></div>
+          <div class="col-4 pr-3"><img src="https://picsum.photos/id/208/400/300" alt="#"></div>
+          <div class="col-4 pr-3"><img src="https://picsum.photos/id/211/400/300" alt="#"></div>
+        </div>
+      </div>
     </div>
-
-    <div class="row d-flex no-gutters my-3 mx-auto text-center">
-      <div class="col-4 pr-3"><img src="https://picsum.photos/id/203/400/300" alt="#"></div>
-      <div class="col-4 pr-3"><img src="https://picsum.photos/id/204/400/300" alt="#"></div>
-      <div class="col-4 pr-3"><img src="https://picsum.photos/id/210/400/300" alt="#"></div>
+    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">  <div class="container pb-3 d-flex justify-content-center align-items-center" id="feed">
+      <div class="card p-2 rounded">
+        <div class="custom-card-header">
+          <div class="d-flex justify-content-between">
+            <span class="font-weight-bold"><h4>What a cute cow!</h4></span>
+            <span><small>08/16</small></span>
+          </div>
+        </div>
+        <div class="header py-3 pl-3">
+          <img src="https://picsum.photos/id/200/800/700" alt="#">
+          <div class="mt-2"> 
+            <span class="d-block font-weight-bold"><strong>250 likes</strong></span>
+            <div class="d-block">
+              <span>Look at the cute cow I found on my walk today.</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   
-    <div class="row d-flex no-gutters my-3 mx-auto text-center">
-      <div class="col-4 pr-3"><img src="https://picsum.photos/id/206/400/300" alt="#"></div>
-      <div class="col-4 pr-3"><img src="https://picsum.photos/id/208/400/300" alt="#"></div>
-      <div class="col-4 pr-3"><img src="https://picsum.photos/id/211/400/300" alt="#"></div>
-    </div>
-  </div>
-
-  <div class="container pb-3 d-flex justify-content-center align-items-center" id="feed">
-    <div class="card p-2 rounded">
-      <div class="custom-card-header">
-        <div class="d-flex justify-content-between">
-          <span class="font-weight-bold"><h4>What a cute cow!</h4></span>
-          <span><small>08/16</small></span>
+    <div class="container pb-3 d-flex justify-content-center align-items-center" id="feed">
+      <div class="card p-2 rounded">
+        <div class="custom-card-header">
+          <div class="d-flex justify-content-between">
+            <span class="font-weight-bold"><h4>Working or hardly working?</h4></span>
+            <span><small>08/16</small></span>
+          </div>
+        </div>
+        <div class="header py-3 pl-3">
+          <img src="https://picsum.photos/id/201/800/700" alt="#">
+          <div class="mt-2"> 
+            <span class="d-block font-weight-bold"><strong>170 likes</strong></span>
+            <div class="d-block">
+              <span>I'm so excited to work on building new skills!</span>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="header py-3 pl-3">
-        <img src="https://picsum.photos/id/200/800/700" alt="#">
-        <div class="mt-2"> 
-          <span class="d-block font-weight-bold"><strong>250 likes</strong></span>
-          <div class="d-block">
-            <span>Look at the cute cow I found on my walk today.</span>
+    </div>
+  
+    <div class="container pb-3 d-flex justify-content-center align-items-center" id="feed">
+      <div class="card p-2 rounded">
+        <div class="custom-card-header">
+          <div class="d-flex justify-content-between">
+            <span class="font-weight-bold"><h4>Fall is coming!</h4></span>
+            <span><small>08/16</small></span>
+          </div>
+        </div>
+        <div class="header py-3 pl-3">
+          <img src="https://picsum.photos/id/202/800/700" alt="#">
+          <div class="mt-2"> 
+            <span class="d-block font-weight-bold"><strong>150 likes</strong></span>
+            <div class="d-block">
+              <span>The weather is finally cooling down.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="container pb-3 d-flex justify-content-center align-items-center" id="feed">
+      <div class="card p-2 rounded">
+        <div class="custom-card-header">
+          <div class="d-flex justify-content-between">
+            <span class="font-weight-bold"><h4>Biking with a view</h4></span>
+            <span><small>08/16</small></span>
+          </div>
+        </div>
+        <div class="header py-3 pl-3">
+          <img src="https://picsum.photos/id/203/800/700" alt="#">
+          <div class="mt-2"> 
+            <span class="d-block font-weight-bold"><strong>200 likes</strong></span>
+            <div class="d-block">
+              <span>This is my longest bike ride yet, and the prettiest!</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="container pb-3 d-flex justify-content-center align-items-center" id="feed">
+      <div class="card p-2 rounded">
+        <div class="custom-card-header">
+          <div class="d-flex justify-content-between">
+            <span class="font-weight-bold"><h4>Train Tracks</h4></span>
+            <span><small>08/16</small></span>
+          </div>
+        </div>
+        <div class="header py-3 pl-3">
+          <img src="https://picsum.photos/id/204/800/700" alt="#">
+          <div class="mt-2"> 
+            <span class="d-block font-weight-bold"><strong>300 likes</strong></span>
+            <div class="d-block">
+              <span>I've started exploring more and discovered new places.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="container pb-3 d-flex justify-content-center align-items-center" id="feed">
+      <div class="card p-2 rounded">
+        <div class="custom-card-header">
+          <div class="d-flex justify-content-between">
+            <span class="font-weight-bold"><h4>Historic downtown</h4></span>
+            <span><small>08/16</small></span>
+          </div>
+        </div>
+        <div class="header py-3 pl-3">
+          <img src="https://picsum.photos/id/210/800/700" alt="#">
+          <div class="mt-2"> 
+            <span class="d-block font-weight-bold"><strong>100 likes</strong></span>
+            <div class="d-block">
+              <span>I'm feeling artsy today.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="container pb-3 d-flex justify-content-center align-items-center" id="feed">
+      <div class="card p-2 rounded">
+        <div class="custom-card-header">
+          <div class="d-flex justify-content-between">
+            <span class="font-weight-bold"><h4>The Farm at sunrise!</h4></span>
+            <span><small>08/16</small></span>
+          </div>
+        </div>
+        <div class="header py-3 pl-3">
+          <img src="https://picsum.photos/id/206/800/700" alt="#">
+          <div class="mt-2"> 
+            <span class="d-block font-weight-bold"><strong>280 likes</strong></span>
+            <div class="d-block">
+              <span>This is my favorite part of my morning walk.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="container pb-3 d-flex justify-content-center align-items-center" id="feed">
+      <div class="card p-2 rounded">
+        <div class="custom-card-header">
+          <div class="d-flex justify-content-between">
+            <span class="font-weight-bold"><h4>New discovery!</h4></span>
+            <span><small>08/16</small></span>
+          </div>
+        </div>
+        <div class="header py-3 pl-3">
+          <img src="https://picsum.photos/id/208/800/700" alt="#">
+          <div class="mt-2"> 
+            <span class="d-block font-weight-bold"><strong>90 likes</strong></span>
+            <div class="d-block">
+              <span>I found a cool abandoned shack on my walk today!</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="container pb-3 d-flex justify-content-center align-items-center" id="feed">
+      <div class="card p-2 rounded">
+        <div class="custom-card-header">
+          <div class="d-flex justify-content-between">
+            <span class="font-weight-bold"><h4>Ahoy mateys!</h4></span>
+            <span><small>08/16</small></span>
+          </div>
+        </div>
+        <div class="header py-3 pl-3">
+          <img src="https://picsum.photos/id/211/800/700" alt="#">
+          <div class="mt-2"> 
+            <span class="d-block font-weight-bold"><strong>150 likes</strong></span>
+            <div class="d-block">
+              <span>I always enjoy a nice boat ride in the harbor.</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-
-  <div class="container pb-3 d-flex justify-content-center align-items-center" id="feed">
-    <div class="card p-2 rounded">
-      <div class="custom-card-header">
-        <div class="d-flex justify-content-between">
-          <span class="font-weight-bold"><h4>Working or hardly working?</h4></span>
-          <span><small>08/16</small></span>
-        </div>
-      </div>
-      <div class="header py-3 pl-3">
-        <img src="https://picsum.photos/id/201/800/700" alt="#">
-        <div class="mt-2"> 
-          <span class="d-block font-weight-bold"><strong>170 likes</strong></span>
-          <div class="d-block">
-            <span>I'm so excited to work on building new skills!</span>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
+      
 
-  <div class="container pb-3 d-flex justify-content-center align-items-center" id="feed">
-    <div class="card p-2 rounded">
-      <div class="custom-card-header">
-        <div class="d-flex justify-content-between">
-          <span class="font-weight-bold"><h4>Fall is coming!</h4></span>
-          <span><small>08/16</small></span>
-        </div>
-      </div>
-      <div class="header py-3 pl-3">
-        <img src="https://picsum.photos/id/202/800/700" alt="#">
-        <div class="mt-2"> 
-          <span class="d-block font-weight-bold"><strong>150 likes</strong></span>
-          <div class="d-block">
-            <span>The weather is finally cooling down.</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <div class="container pb-3 d-flex justify-content-center align-items-center" id="feed">
-    <div class="card p-2 rounded">
-      <div class="custom-card-header">
-        <div class="d-flex justify-content-between">
-          <span class="font-weight-bold"><h4>Biking with a view</h4></span>
-          <span><small>08/16</small></span>
-        </div>
-      </div>
-      <div class="header py-3 pl-3">
-        <img src="https://picsum.photos/id/203/800/700" alt="#">
-        <div class="mt-2"> 
-          <span class="d-block font-weight-bold"><strong>200 likes</strong></span>
-          <div class="d-block">
-            <span>This is my longest bike ride yet, and the prettiest!</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <div class="container pb-3 d-flex justify-content-center align-items-center" id="feed">
-    <div class="card p-2 rounded">
-      <div class="custom-card-header">
-        <div class="d-flex justify-content-between">
-          <span class="font-weight-bold"><h4>Train Tracks</h4></span>
-          <span><small>08/16</small></span>
-        </div>
-      </div>
-      <div class="header py-3 pl-3">
-        <img src="https://picsum.photos/id/204/800/700" alt="#">
-        <div class="mt-2"> 
-          <span class="d-block font-weight-bold"><strong>300 likes</strong></span>
-          <div class="d-block">
-            <span>I've started exploring more and discovered new places.</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="container pb-3 d-flex justify-content-center align-items-center" id="feed">
-    <div class="card p-2 rounded">
-      <div class="custom-card-header">
-        <div class="d-flex justify-content-between">
-          <span class="font-weight-bold"><h4>Historic downtown</h4></span>
-          <span><small>08/16</small></span>
-        </div>
-      </div>
-      <div class="header py-3 pl-3">
-        <img src="https://picsum.photos/id/210/800/700" alt="#">
-        <div class="mt-2"> 
-          <span class="d-block font-weight-bold"><strong>100 likes</strong></span>
-          <div class="d-block">
-            <span>I'm feeling artsy today.</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="container pb-3 d-flex justify-content-center align-items-center" id="feed">
-    <div class="card p-2 rounded">
-      <div class="custom-card-header">
-        <div class="d-flex justify-content-between">
-          <span class="font-weight-bold"><h4>The Farm at sunrise!</h4></span>
-          <span><small>08/16</small></span>
-        </div>
-      </div>
-      <div class="header py-3 pl-3">
-        <img src="https://picsum.photos/id/206/800/700" alt="#">
-        <div class="mt-2"> 
-          <span class="d-block font-weight-bold"><strong>280 likes</strong></span>
-          <div class="d-block">
-            <span>This is my favorite part of my morning walk.</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="container pb-3 d-flex justify-content-center align-items-center" id="feed">
-    <div class="card p-2 rounded">
-      <div class="custom-card-header">
-        <div class="d-flex justify-content-between">
-          <span class="font-weight-bold"><h4>New discovery!</h4></span>
-          <span><small>08/16</small></span>
-        </div>
-      </div>
-      <div class="header py-3 pl-3">
-        <img src="https://picsum.photos/id/208/800/700" alt="#">
-        <div class="mt-2"> 
-          <span class="d-block font-weight-bold"><strong>90 likes</strong></span>
-          <div class="d-block">
-            <span>I found a cool abandoned shack on my walk today!</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="container pb-3 d-flex justify-content-center align-items-center" id="feed">
-    <div class="card p-2 rounded">
-      <div class="custom-card-header">
-        <div class="d-flex justify-content-between">
-          <span class="font-weight-bold"><h4>Ahoy mateys!</h4></span>
-          <span><small>08/16</small></span>
-        </div>
-      </div>
-      <div class="header py-3 pl-3">
-        <img src="https://picsum.photos/id/211/800/700" alt="#">
-        <div class="mt-2"> 
-          <span class="d-block font-weight-bold"><strong>150 likes</strong></span>
-          <div class="d-block">
-            <span>I always enjoy a nice boat ride in the harbor.</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> 
 </body>
 </html>
